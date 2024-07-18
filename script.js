@@ -1,3 +1,5 @@
+// Grid Creation
+
 const container = document.querySelector('#container');
 
 function makeGrid(num) {
@@ -10,5 +12,15 @@ function makeGrid(num) {
         }
     }
 }
-
 makeGrid(16);
+
+// Change Color on mouse over
+
+const squares = document.querySelectorAll('.square');
+
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        square.style.background = 'brown';
+    });
+});
+
