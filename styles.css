@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+.screen {
+    display: flex;
+    gap: 5rem;
+    box-shadow: ;
+}
+
 .container {
     width: 500px;
     height: 500px;
@@ -13,5 +19,13 @@
 
 .square {
     border: 1px solid #000;
+}
+
+#grid-btn {
+    padding: 10px 20px;
+    border: 0;
+    background: lightcyan;
+    border-radius: 5px;
+    box-shadow: 3px -2px 6px 1px rgba(0, 0, 0, 0.23);
 }
 

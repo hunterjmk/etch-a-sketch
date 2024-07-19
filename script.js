@@ -11,16 +11,36 @@ function makeGrid(num) {
             container.appendChild(square);
         }
     }
+    addHoverEffect();
 }
 makeGrid(16);
 
+// Change Grid Size
+const gridBtn = document.querySelector('#grid-btn');
+
+function changeGridSize() {
+    let newNum = parseInt(prompt('Enter new grid dimension, between 1 and 100: '));
+
+    if (newNum < 1 || newNum > 100 || isNaN(newNum)) {
+        alert('Grid Size must be between 1 and 100!');
+    } else {
+        container.innerHTML = '';
+
+        makeGrid(newNum);
+    }
+}
+
+gridBtn.addEventListener('click', changeGridSize);
+
 // Change Color on mouse over
 
-const squares = document.querySelectorAll('.square');
+function addHoverEffect() {
+    const squares = document.querySelectorAll('.square');
 
-squares.forEach((square) => {
-    square.addEventListener('mouseover', () => {
+    squares.forEach((square) => {
+        square.addEventListener('mouseover', () => {
         square.style.background = 'brown';
-    });
-});
+        });
+    })
+;}
 
