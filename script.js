@@ -36,11 +36,16 @@ gridBtn.addEventListener('click', changeGridSize);
 
 function addHoverEffect() {
     const squares = document.querySelectorAll('.square');
+    const clearBtn = document.querySelector('#clear-btn');
 
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
         square.style.background = 'brown';
         });
-    })
+
+        clearBtn.addEventListener('click', () => {
+            square.style.background = 'white';
+        });
+    });
 ;}
 
