@@ -40,7 +40,7 @@ function addHoverEffect() {
 
     squares.forEach((square) => {
         square.addEventListener('mouseover', () => {
-        square.style.background = 'brown';
+        square.style.background = getRandomColor();
         });
 
         clearBtn.addEventListener('click', () => {
@@ -48,4 +48,10 @@ function addHoverEffect() {
         });
     });
 ;}
+
+function getRandomColor() {
+    let randomColor = '#' + (Math.floor(Math.random() * 16777215).toString(16));
+
+    return randomColor;
+}
 
